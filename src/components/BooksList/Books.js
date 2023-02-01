@@ -7,8 +7,9 @@ const Books = (props) => {
       <h2>BOOK LIST</h2>
       <ul>
         <BookItem
-          title="Book Name"
-          description="This is a first book - amazing!"
+
+        // title="Book Name"
+        // description="This is a first book - amazing!"
         />
       </ul>
     </section>

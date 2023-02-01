@@ -1,17 +1,18 @@
+import AddBook from "../AddBookForm/AddBook";
 import Card from "../UI/Card";
 import classes from "./BookItem.module.css";
 
 const BookItem = (props) => {
-  const { title, description } = props;
+  // const { title, description } = props;
 
   return (
     <li className={classes.item}>
       <Card>
         <div>
           <header>
-            <h3>{title}</h3>
+            <h3>{}</h3>
           </header>
-          <p>{description}</p>
+          <p>{}</p>
         </div>
         <div className={classes.actions}>
           <button className={classes.deleteButton}>Delete</button>
