@@ -2,21 +2,21 @@ import AddBook from "../AddBookForm/AddBook";
 import Card from "../UI/Card";
 import classes from "./BookItem.module.css";
 
-const BookItem = (props) => {
-  // const { title, description } = props;
+const BookItem = ({ book }) => {
+  const { id, bookName, bookDescription } = book;
 
   return (
     <li className={classes.item}>
       <Card>
-        <div>
+        <div to={`/students/${id}`}>
           <header>
-            <h3>{}</h3>
+            <h3>{bookName}</h3>
           </header>
-          <p>{}</p>
+          <p>{bookDescription}</p>
         </div>
         <div className={classes.actions}>
           <button className={classes.deleteButton}>Delete</button>
-          <button>Update User</button>
+          <button>Update </button>
         </div>
       </Card>
     </li>

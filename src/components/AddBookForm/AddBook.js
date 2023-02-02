@@ -1,17 +1,12 @@
 import { useDispatch } from "react-redux";
 
-import { addBookActions } from "../../store/features/addBookSlice";
 import Card from "../UI/Card";
 import classes from "./AddBook.module.css";
+import { addBook } from "../../store/features/addBookSlice";
 
 const AddBook = () => {
   const dispatch = useDispatch();
-
-  const addBookHandler = () => {
-    const bookName = document.getElementById("bookName").value;
-    const bookDescription = document.getElementById("bookDescription").value;
-    dispatch(addBookActions.addBookToLibrary({ bookName, bookDescription }));
-  };
+  // const { id, bookName, bookDescription } = book;
 
   return (
     <Card className={classes.card}>
@@ -28,7 +23,7 @@ const AddBook = () => {
       </ul>
 
       <div className={classes.actions}>
-        <button onClick={addBookHandler}>Add Book</button>
+        <button>Add Book</button>
       </div>
     </Card>
   );

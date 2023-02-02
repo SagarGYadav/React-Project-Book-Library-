@@ -30,6 +30,7 @@
 .deleteButton {
   color: #dd1111;
   border: 1px solid #fc1904;
+  margin-right: 1rem;
 }
 
 .deleteButton:hover,

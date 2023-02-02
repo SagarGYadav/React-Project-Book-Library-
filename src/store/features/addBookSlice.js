@@ -1,35 +1,37 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  bookName: "",
-  bookDescription: "",
+  books: [
+    {
+      id: 1,
+      bookName: "Atomic Habits",
+      bookDescription: "Book by James Clear",
+    },
+    {
+      id: "2",
+      bookName: "Rich Dad Poor Dad",
+      bookDescription: "Book by Robert Kiyosaki and Sharon Lechter",
+    },
+  ],
+  book: {
+    bookName: "",
+    bookDescription: "",
+  },
 };
 
 const addBookSlice = createSlice({
   name: "addBook",
   initialState,
   reducers: {
-    addBookToLibrary(state, action) {
-      const newBook = {
-        bookName: action.payload.bookName,
-        bookDescription: action.payload.bookDescription,
-      };
-      state.push(newBook);
+    getBook: (state, action) => {
+      state.book = state.books.find((el) => el.id === action.payload);
+    },
+    addBook: (state, action) => {
+      state.books = [action.payload, ...state.books];
     },
   },
 });
 
-export const addBookActions = addBookSlice.actions;
+export const { getBook, addBook } = addBookSlice.actions;
 
 export default addBookSlice.reducer;
-
-// {
-//   id: "1",
-//   bookName: "Atomic Habits",
-//   bookDescription: "Book by James Clear",
-// },
-// {
-//   id: "2",
-//   bookName: "Rich Dad Poor Dad",
-//   bookDescription: "Book by Robert Kiyosaki and Sharon Lechter",
-// },
