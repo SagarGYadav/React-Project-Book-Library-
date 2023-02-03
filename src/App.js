@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 
-import AddBook from "./components/AddBookForm/AddBook";
-import Books from "./components/BooksList/Books";
+import AddBook from "./components/AddBook";
+import Books from "./components/Books";
 
 function App() {
   return (

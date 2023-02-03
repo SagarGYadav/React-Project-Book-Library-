@@ -1,8 +1,8 @@
 import { useDispatch } from "react-redux";
 
-import Card from "../UI/Card";
+import Card from "./UI/Card";
 import classes from "./AddBook.module.css";
-import { addBook } from "../../store/features/addBookSlice";
+import { addBook } from "../store/features/addBookSlice";
 
 const AddBook = () => {
   const dispatch = useDispatch();
@@ -15,6 +15,10 @@ const AddBook = () => {
         <div className={classes.details}>
           <label htmlFor="name">Book Name</label>
           <input type="text" id="name" />
+        </div>
+        <div className={classes.details}>
+          <label htmlFor="bookAuthor">Book Author</label>
+          <input type="text" id="bookAuthor" />
         </div>
         <div className={classes.details}>
           <label htmlFor="bookDescription">Book Description</label>

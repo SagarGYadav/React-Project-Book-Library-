@@ -5,16 +5,21 @@ const initialState = {
     {
       id: 1,
       bookName: "Atomic Habits",
-      bookDescription: "Book by James Clear",
+      bookAuthor: "Book by James Clear",
+      bookDescription:
+        "Atomic Habits is the definitive guide to breaking bad behaviors and adopting good ones in four steps, showing you how small, incremental, everyday routines compound into massive, positive change over time.",
     },
     {
       id: "2",
       bookName: "Rich Dad Poor Dad",
-      bookDescription: "Book by Robert Kiyosaki and Sharon Lechter",
+      bookAuthor: "Book by Robert Kiyosaki ",
+      bookDescription:
+        "Rich Dad Poor Dad is about Robert Kiyosaki (author) and his two dads—his real father (poor dad) and the father of his best friend (rich dad)—and the ways in which both men shaped his thoughts about money and investing. The book explodes the myth that you do not need to earn a high income to become rich.",
     },
   ],
   book: {
     bookName: "",
+    bookAuthor: "",
     bookDescription: "",
   },
 };
